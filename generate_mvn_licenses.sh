@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 licenses_file="$1"
 set -ex
 mvn license:aggregate-download-licenses
