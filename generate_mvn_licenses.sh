@@ -1,7 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 licenses_file="$1"
+repo_linkname="$2"
 set -ex
 mvn license:aggregate-download-licenses
 xml2csv --input target/generated-resources/licenses.xml --noheader --output intermediate.csv --tag="dependency" --ignore="comments"
-awk -F',' '{ print $4 "," $1 "," $2 "," $3 }' intermediate.csv | sort -u  >> "${licenses_file}"
+awk -F',' '{ print $4 "," $1 "," $2 "," $3 "," $10 "'"$repo_linkname"'" }' intermediate.csv | sort -u  >> "${licenses_file}"
 sed -i 's/"//g' "${licenses_file}"
