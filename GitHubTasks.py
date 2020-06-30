@@ -671,7 +671,7 @@ parser_e.set_defaults(func=clone_repo)
 args = parser.parse_args()
 
 # Initialize common static variables
-_filetrek_url = "https://api.github.com/repos/FileTrek/"
+_filetrek_url = "https://api.github.com/users/shankarcs/repos"
 _authorization_token = 'token ' + args.key
 _headers = {'Authorization': _authorization_token}
 _work_dir = Path(args.reponame)
