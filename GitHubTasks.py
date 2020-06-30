@@ -416,7 +416,7 @@ def setup_new_branch(args):
         source_branch_existence_status = check_branch_existence(args.reponame, args.srcbranch)
 
         if source_branch_existence_status is False:
-            logging.info("WARN: Source branch - %s not exists. Try with a valid source branch", args.newbranch)
+            logging.info("WARN: Source branch - %s not exists. Try with a valid source branch")
             sys.exit(1)
 
         new_branch_existence_status = check_branch_existence(args.reponame, args.newbranch)
