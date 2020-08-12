@@ -1,1 +1,1 @@
-sonarqube-analysis filter=git-crypt diff=git-crypt
+credentials.xml filter=git-crypt diff=git-crypt
